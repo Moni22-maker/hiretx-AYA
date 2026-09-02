@@ -1,0 +1,6 @@
+<?php
+// Copy this file to db.local.php and replace the values with your hosting details.
+define('HIRETX_DB_HOST', 'your-infinityfree-mysql-host');
+define('HIRETX_DB_USER', 'your-database-username');
+define('HIRETX_DB_PASSWORD', 'your-database-password');
+define('HIRETX_DB_NAME', 'your-database-name');
