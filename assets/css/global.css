@@ -1,0 +1,93 @@
+/* global.css - ملف التنسيقات العامة والمشتركة لمنصة HireTX */
+
+/* 1. إعدادات إعادة الضبط والخطوط الأساسية */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* 2. الحاوية العامة التي تضم القائمة الجانبية والمحتوى */
+.main-container, 
+.dashboard-container, 
+.simulation-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #0b0b0b;
+}
+
+/* 3. تثبيت القائمة الجانبية (Sidebar) كعنصر ثابت أقصى اليسار */
+/* هيكلة القائمة الجانبية لتوزيع المحتوى بين الأعلى والأسفل */
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+    background-color: #121212;
+    border-right: 1px solid #1a1a1a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+}
+
+/* تنسيق قسم الـ Footer السفلي في الـ Sidebar */
+.sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #1a1a1a;
+    background-color: #121212;
+}
+
+.user-profile-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 6px;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    background-color: #facc15;
+    color: #000;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.user-info h4 {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+.user-info p {
+    color: #6b7280;
+    font-size: 0.72rem;
+    margin: 0;
+}

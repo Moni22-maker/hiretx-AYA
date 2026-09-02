@@ -1,0 +1,358 @@
+/* =====================================================
+   HIRETX DASHBOARD LAYOUT
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0d12;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#ffffff;
+}
+
+/* الحاوية الرئيسية */
+
+.main-container{
+    width:100%;
+    min-height:100vh;
+}
+
+/* المحتوى الرئيسي */
+
+.content{
+    margin-left:280px;          /* نفس عرض الـ Sidebar */
+    width:calc(100% - 280px);
+    min-height:100vh;
+    padding:30px;
+}
+
+/* ================= HEADER ================= */
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    border-bottom:1px solid #1f1f1f;
+    padding-bottom:20px;
+}
+
+.dashboard-header h1{
+    font-size:1.75rem;
+    font-weight:600;
+    color:#fff;
+    margin:0;
+}
+
+.header-controls{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.header-controls .date{
+    color:#9ca3af;
+    font-size:.85rem;
+}
+
+.lang-switch{
+    background:#141414;
+    border:1px solid #222;
+    border-radius:20px;
+    padding:3px 6px;
+    display:flex;
+    gap:4px;
+}
+
+.lang-btn{
+    padding:3px 8px;
+    font-size:.75rem;
+    font-weight:bold;
+    border-radius:12px;
+    cursor:pointer;
+    color:#9ca3af;
+}
+
+.lang-btn.active{
+    background:#facc15;
+    color:#000;
+}
+
+/* ================= STATS ================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.stat-card{
+    background:#141414;
+    border:1px solid #222;
+    border-radius:12px;
+    padding:18px 15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:140px;
+}
+
+.stat-icon{
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+
+.stat-number{
+    font-size:1.7rem;
+    font-weight:bold;
+    color:#fff;
+    margin-bottom:4px;
+}
+
+.stat-label{
+    font-size:.8rem;
+    color:#fff;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+.stat-sub{
+    font-size:.7rem;
+    color:#6b7280;
+}
+
+.red-text{
+    color:#ef4444 !important;
+}/* شبكة القسم السفلي */
+.dashboard-lower-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+}
+
+.dash-box {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box-title {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+/* العداد الدائري */
+.index-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circular-progress-wrapper {
+    margin: 20px 0;
+}
+
+.circular-chart {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(#ef4444 0deg 35deg, #222 35deg 360deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-inner {
+    width: 116px;
+    height: 116px;
+    background: #141414;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-val {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.index-max {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.status-badge-red {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.box-footer-note {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* قسم الرادار والمخطط */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.classification-text {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.radar-container {
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radar-chart-mock {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #2a2a2a;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radar-label {
+    position: absolute;
+    font-size: 0.72rem;
+    color: #9ca3af;
+}
+
+.radar-label.technical { top: -15px; left: 50%; transform: translateX(-50%); }
+.radar-label.behavioral { top: 35px; right: -40px; }
+.radar-label.cognitive { bottom: -15px; right: 25px; }
+.radar-label.leadership { bottom: -15px; left: 25px; }
+.radar-label.market { top: 35px; left: -45px; }
+
+.radar-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #facc15;
+    border-radius: 50%;
+}
+
+/* أشرطة التقدم السفلية */
+.progress-bars-section {
+    border-top: 1px solid #1f1f1f;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.progress-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.p-letter {
+    font-weight: bold;
+    width: 15px;
+}
+
+.blue-text { color: #3b82f6; }
+.purple-text { color: #a855f7; }
+
+.p-track {
+    flex: 1;
+    height: 6px;
+    background: #222;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.p-fill {
+    height: 100%;
+    background: #3b82f6;
+}
+
+.blue-fill { background: #3b82f6; }
+.purple-fill { background: #a855f7; }
+
+.p-val {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    min-width: 40px;
+    text-align: right;
+}
+
+.p-end-val {
+    color: #6b7280;
+    font-size: 0.75rem;
+    min-width: 20px;
+    text-align: right;
+}
+
+.badge-letter {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.green-badge { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+.yellow-badge { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+/* التجاوب مع الشاشات */
+@media (max-width: 1400px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .dashboard-lower-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ترك مسافة يسارية تعادل عرض القائمة الجانبية لمنع تداخل المحتوى */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* استبدل .main-content أو .content بالصنف (Class) الذي تستخدمه لحضانة المحتوى الرئيسي بجانب الـ Sidebar */
